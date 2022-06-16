@@ -6,7 +6,7 @@ public class Board{
  
  public Board(){
    println("A new board has been created"); 
-   board[0][2] = 1;
+   board[0][0] = 1;
  }
 
  /**
@@ -42,21 +42,10 @@ public class Board{
   * @param col an integer representing the index of the column the "X" can be found.
   */
   void drawX(int row, int col){
-    strokeWeight(16);
-    if(row == 0 && col == 0){
-      line(0, 0, 200, 200);
-      line(200, 0, 0, 200);
-    }
-    
-    if(row == 0 && col == 1){
-      line(200, 0, 400, 200);
-      line(400, 0, 200, 200);
-    }
-    
-    if(row == 0 && col == 2){
-      line(400, 0, 600, 200);
-      line(600, 0, 400, 200);
-    }
+    fill(0, 0, 0);
+    textAlign(CENTER);
+    textSize(width/3);
+    text("X", (col + 1) * 100, 575);
   }
   
   /**
